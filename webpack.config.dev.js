@@ -1,6 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
-var CompressionPlugins = require('compression-webpack-plugin')
+var CompressionPlugin = require('compression-webpack-plugin')
 
 module.exports = {
     entry: [
@@ -65,7 +65,7 @@ module.exports = {
                 unused: true,
                 warnings: false,
                 drop_console: true,
-                unsafe: true,
+                unsafe: true
             }
         }),
         new CompressionPlugin({

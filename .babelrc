@@ -1,5 +1,4 @@
 {
-  "presets": [
-    ["env", { "modules": false }]
-  ]
+  "presets": ["es2015", "stage-0"],
+  "comments": false
 }
