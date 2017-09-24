@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import app from './app.vue'
+import { sync } from 'vuex-router-sync'
 import { routes } from './system/routes'
+import store from './store/index'
 
 Vue.use(VueRouter)
 
@@ -10,8 +12,11 @@ export const router = new VueRouter({
     routes
 })
 
+sync(store, router)
+
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(app)
 })
